@@ -1,0 +1,84 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+		<script src="../library/darkmode.js"></script>
+		<script
+			src="https://kit.fontawesome.com/0f2559d91f.js"
+			crossorigin="anonymous"
+		></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Youだけ野暮</title>
+	</head>
+	<body>
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (
+				localStorage.getItem("color-theme") === "dark" ||
+				(!("color-theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+			"Hiragino Sans", Meiryo, sans-serif;
+	}
+	body {
+		@apply bg-gray-100 dark:bg-slate-800 dark:text-white;
+	}
+	nav {
+		@apply bg-gray-100 dark:bg-slate-900;
+	}
+	main {
+		padding: 1.5rem;
+	}
+	p a {
+		@apply text-blue-400 underline;
+	}
+	section {
+		@apply min-h-screen;
+	}
+	article {
+		@apply p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-slate-900 dark:border-gray-700;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	h1 {
+		@apply mb-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-600 to-pink-400;
+	}
+	h2 {
+		@apply text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+	}
+	h3 {
+		@apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 my-5;
+	}
+	h4 {
+		@apply text-lg font-bold my-1;
+	}
+</style>

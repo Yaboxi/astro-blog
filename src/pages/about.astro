@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ListArticles from "../components/ListArticles.astro";
+---
+
+<Layout title="Home">
+	<main>
+		<section>
+			<div class="px-4 mx-auto max-w-screen-xl">
+				<h1>About</h1>
+				<article>
+					<h2>About</h2>
+					<hr
+						class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"
+					/>
+					<h3>このブログはなに？ - What is this</h3>
+					<p>
+						主にテスト自動化に関わっているQAエンジニア/SETのやぼ(<a
+							href="https://twitter.com/yaboxi_">@yaboxi_</a
+						>)が、 言うに及ばない野暮なことを垂れ流すブログです。<br
+						/>
+						業界一の怪文書クリエイターを目指してがんばります。
+					</p>
+					<h3>なんでこのブログをつくったの？ - Why I built this</h3>
+					<p>
+						大きな目的はWeb技術の学習目的です。<br />
+						"<b>Software Engineer</b> in Test"を名乗っているのに フロントエンドもバックエンドもマルデワカラナイ・・・<br
+						/>
+						<b
+							>「ならYou自分でサイト一個つくっちゃいなYO!
+							(from自分to自分)」</b
+						>
+						というノリで作りました。<br />
+						<br />
+						開発経験のないままに業務でプロダクトオーナー業にも少しだけ携わらせていただいたんですが、<br
+						/>
+						ブログひとつ作るだけでも本当大変なのが分かりました。特にレスポンシブデザインがまー思い通りに行かないなんの。<br
+						/>
+						当時の開発関係者の皆様、無茶を言っていてすみませんでした。<br
+						/>
+						<br />
+						そんなこんなでド素人がスクラッチで作ってますので、怪しい出来のアングラサイトに仕上がっています。<br
+						/>
+						私自身アングラな人間ですので、皆様を
+						<button
+							data-modal-target="defaultModal"
+							data-modal-toggle="defaultModal"
+							class="inline-block relative inline-flex items-center justify-center p-0.5 mx-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+						>
+							<span
+								class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+							>
+								Welcome to Underground
+							</span>
+						</button>
+						するべく尽力いたします。<br />
+						よろしければ見ていってくださいませ。<br />
+
+						<h3>あなたはだれ？ - Who I am</h3>
+						<p>【工事中】別ページを作成予定です。</p>
+
+						<h3>どんな技術でつくっているの？ - How I built this</h3>
+						<p>【工事中】GitHubに書きます。</p>
+
+						<hr
+							class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"
+						/>
+						<div class="flex items-center text-gray-500 text-xs">
+							<span class="ml-auto">2023 Written by Yaboxi_.</span
+							>
+						</div>
+					</p>
+				</article>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<div
+	id="defaultModal"
+	tabindex="-1"
+	aria-hidden="true"
+	class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+>
+	<div class="absolute w-full h-full bg-black opacity-80"></div>
+	<div class="relative w-full h-full max-w-2xl md:h-auto">
+		<!-- Modal content -->
+		<div
+			class="relative bg-gray-100 rounded-lg shadow-xl shadow-gray-400 dark:bg-gray-700 dark:shadow-emerald-600"
+		>
+			<!-- Modal header -->
+			<div
+				class="flex items-start justify-between p-4 border-b rounded-t border-white dark:border-emerald-600"
+			>
+				<h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+					Welcome to Underground
+				</h3>
+				<button
+					type="button"
+					class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+					data-modal-hide="defaultModal"
+				>
+					<svg
+						aria-hidden="true"
+						class="w-5 h-5"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path></svg
+					>
+					<span class="sr-only">Close modal</span>
+				</button>
+			</div>
+			<!-- Modal body -->
+			<div class="p-6 space-y-6">
+				<p
+					class="text-base leading-relaxed text-gray-500 dark:text-white mb-5"
+				>
+					<b>「おまいらの黒歴史」</b><br />
+					<br />
+					<span class="inline text-green-400"
+						>358 ：世界遺産：2006/08/14(月) 15:48:55 ID:O2Q5Lui70<br
+						/></span
+					>
+					中学時代のパソコンの授業でインターネットを使った時みんなが自分の好きな漫画や野球のページを見てる時に<br
+					/>
+					自分だけこれみよがしに2ｃｈにつないでAAとかを周りに見せてたこと<br
+					/>
+					しかも「このページって何？」って聞かれた時に「ヤバイ奴らの集会所みたいなもん」とか答えたこと<br
+					/>
+					さらに友達に2ｃｈへの行きかたを教えるためにヤフーで2ｃｈって検索させて<br
+					/>
+					でてきたリンクをクリックして2ｃｈのトップページが表示された瞬間に<br
+					/>
+					そいつの耳元で<span class="font-bold inline text-red-500">
+						「Welcome to　Underground」
+					</span>ってささやいたこと<br />
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

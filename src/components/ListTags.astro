@@ -1,0 +1,23 @@
+---
+//microCMS呼び出し
+import { getBlogs, getTags } from "../library/microcms";
+import Tag from "./Tag.astro";
+
+const tags = await getTags({
+    fields: ["id", "name"],
+});
+---
+
+<article>
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Tags
+    </h2>
+    <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
+    {
+        tags.contents.map((tag: any) => (
+            <li class="py-1">
+                <Tag tag={tag} />
+            </li>
+        ))
+    }
+</article>

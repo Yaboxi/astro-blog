@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ListArticles from "../../components/ListArticles.astro";
+
+import { getTags, getTagDetail } from "../../library/microcms";
+
+export async function getStaticPaths() {
+	const response = await getTags({ fields: ["id"] });
+	return response.contents.map((content: any) => ({
+		params: {
+			contentId: content.id,
+		},
+	}));
+}
+
+const { contentId } = Astro.params;
+const tag = await getTagDetail(contentId as string);
+---
+
+<Layout title={tag.name}>
+	<main>
+		<section>
+			<div class="px-4 mx-auto max-w-screen-xl">
+				<h1>{tag.name}</h1>
+				<div class="grid gap-10">
+					<ListArticles filters={`tags[contains]${contentId}`} />
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

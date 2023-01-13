@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ListArticles from "../components/ListArticles.astro";
+
+const q = Astro.url.searchParams.get("q");
+---
+
+<Layout title={`Search ${q}`}>
+    <main>
+        <section>
+            <div class="px-4 mx-auto max-w-screen-xl">
+                <h1>{`Search ${q}`}</h1>
+                <div class="grid gap-10">
+                    <ListArticles q={q} />
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

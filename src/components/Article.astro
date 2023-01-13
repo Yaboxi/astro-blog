@@ -1,0 +1,27 @@
+---
+import Tag from "../components/Tag.astro";
+
+const { article } = Astro.props;
+const shapeDate = (date: string) => date.split("T")[0];
+const q = "";
+---
+
+<article>
+    <h2>
+        {article.title}
+    </h2>
+    <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
+    <p
+        class="mb-5 fontd-light text-gray-500 dark:text-gray-400"
+        set:html={article.content}
+    />
+    <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
+    <div class="flex items-center text-gray-500 text-xs">
+        Tags: {
+            article.tags.map((tag: any) => (
+                <Tag tag={tag} class="text-xs py-0.5" />
+            ))
+        }
+        <span class="ml-auto">{shapeDate(article.publishedAt)}</span>
+    </div>
+</article>
