@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/tailwind': ^2.1.3
+  '@astrojs/vercel': ^2.4.0
   astro: ^1.9.0
   flowbite: ^1.6.1
   microcms-js-sdk: ^2.3.2
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
+  '@astrojs/vercel': 2.4.0
   astro: 1.9.2
   flowbite: 1.6.1
   microcms-js-sdk: 2.3.2
@@ -126,6 +128,18 @@ packages:
       node-fetch: 3.3.0
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@astrojs/vercel/2.4.0:
+    resolution: {integrity: sha512-b+4GJxjePSOV3e3uxz7c3ZQGwnNh/TS4jMUzhYuxz+spqmwGlj+GSrrgUXxaC5Hkwu+ZTH0tiM6q9FT0hTvDJA==}
+    dependencies:
+      '@astrojs/webapi': 1.1.1
+      '@vercel/nft': 0.22.5
+      fast-glob: 3.2.12
+      set-cookie-parser: 2.5.1
+    transitivePeerDependencies:
+      - encoding
       - supports-color
     dev: false
 
@@ -3932,6 +3946,10 @@ packages:
 
   /set-blocking/2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
+    dev: false
+
+  /set-cookie-parser/2.5.1:
+    resolution: {integrity: sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==}
     dev: false
 
   /shebang-command/2.0.0:
